@@ -541,13 +541,13 @@ a {
   max-width: 350px;
 }
 .complements-container__article:nth-child(1):before {
-  content: url(../../images/icon-blacklist.svg);
+  content: url(../images/icon-blacklist.svg);
 }
 .complements-container__article:nth-child(2):before {
-  content: url(../../images/icon-text.svg);
+  content: url(../images/icon-text.svg);
 }
 .complements-container__article:nth-child(3):before {
-  content: url(../../images/icon-preview.svg);
+  content: url(../images/icon-preview.svg);
 }
 @media screen and (min-width: 754px) {
   .complements-container__article {

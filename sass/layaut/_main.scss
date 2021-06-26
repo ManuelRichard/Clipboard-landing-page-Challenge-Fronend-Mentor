@@ -111,13 +111,13 @@
     max-width: 350px;
   }
   &__article:nth-child(1):before {
-    content: url(../../images/icon-blacklist.svg);
+    content: url(../images/icon-blacklist.svg);
   }
   &__article:nth-child(2):before {
-    content: url(../../images/icon-text.svg);
+    content: url(../images/icon-text.svg);
   }
   &__article:nth-child(3):before {
-    content: url(../../images/icon-preview.svg);
+    content: url(../images/icon-preview.svg);
   }
 
   @include abs.breakpoint("medium") {
