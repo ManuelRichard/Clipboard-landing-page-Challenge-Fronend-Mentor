@@ -20,7 +20,7 @@ a {
   line-height: 27px;
   text-align: center;
   color: abs.palette(Grayish-Blue);
-  background-image: url(../../images/bg-header-mobile.png);
+  background-image: url(../images/bg-header-mobile.png);
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -31,7 +31,7 @@ a {
 
   @include abs.breakpoint("medium") {
     padding: 0;
-    background-image: url(../../images/bg-header-desktop.png);
+    background-image: url(../images/bg-header-desktop.png);
     background-size: contain;
   }
 
