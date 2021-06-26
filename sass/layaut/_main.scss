@@ -1,0 +1,190 @@
+@use "../abstracts/index" as abs;
+
+.cont-main {
+  margin-top: 120px;
+}
+
+.snippets {
+  &__title {
+    font-size: var(--size-h2);
+  }
+  &__cont-img {
+    margin: 50px 0;
+  }
+
+  @include abs.breakpoint("mini") {
+    &__text {
+      @include abs.mx-width-paragraph;
+    }
+  }
+}
+
+.snippets-arguments {
+  &__argument {
+    margin-bottom: 50px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__argument:last-child {
+    margin-bottom: 0;
+  }
+  &__title {
+    font-size: var(--size-h3);
+  }
+}
+
+// computer positioning
+.snippets {
+  @include abs.breakpoint("medium") {
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      margin-top: 50px;
+    }
+    &__cont-img {
+      flex-basis: 60%;
+      transform: translateX(-10%);
+      margin: 0;
+    }
+    &-arguments {
+      flex-basis: 40%;
+      margin-left: calc(var(--side-margin-global) * -1);
+    }
+    &-arguments__argument {
+      margin-left: 0;
+    }
+  }
+
+  @include abs.breakpoint("large") {
+    &__container {
+      margin-top: 70px;
+    }
+  }
+}
+// access
+.snippets-devices {
+  margin: 150px 0 80px 0;
+
+  &__title {
+    font-size: var(--size-h2);
+  }
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  @include abs.breakpoint("mini") {
+    &__text {
+      @include abs.mx-width-paragraph;
+    }
+  }
+
+  @include abs.breakpoint("medium") {
+    &__img {
+      width: 70%;
+    }
+  }
+  @include abs.breakpoint("large") {
+    &__img {
+      width: 60%;
+    }
+  }
+}
+
+.complements {
+  &__title {
+    font-size: var(--size-h2);
+  }
+}
+
+.complements-container {
+  margin-bottom: 120px;
+
+  &__title {
+    font-size: var(--size-h3);
+  }
+  // iconos file, text, eye
+  &__article {
+    margin-top: 100px;
+    max-width: 350px;
+  }
+  &__article:nth-child(1):before {
+    content: url(../../images/icon-blacklist.svg);
+  }
+  &__article:nth-child(2):before {
+    content: url(../../images/icon-text.svg);
+  }
+  &__article:nth-child(3):before {
+    content: url(../../images/icon-preview.svg);
+  }
+
+  @include abs.breakpoint("medium") {
+    &__article {
+      margin: 40px 5px 0 5px;
+    }
+  }
+
+  @include abs.breakpoint("huge") {
+    margin-bottom: 160px;
+  }
+}
+
+// usage examples
+.testimonials-container {
+  &__list {
+    @include abs.reset-list;
+  }
+  &__testimonial {
+    margin: 0 10px 50px 10px;
+    transform: scale(0.8);
+  }
+
+  @include abs.breakpoint("large") {
+    &__testimonial {
+      margin: 0;
+    }
+  }
+
+  @include abs.breakpoint("huge") {
+    &__testimonial {
+      transform: scale(1);
+    }
+  }
+}
+
+// Flex to list testimonials and complements
+.complements-container,
+.testimonials-container__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include abs.breakpoint("medium") {
+    margin-right: var(--side-margin-global);
+    margin-left: var(--side-margin-global);
+  }
+}
+
+.span {
+  margin: 120px 0;
+
+  &__title {
+    font-size: var(--size-h2);
+  }
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  @include abs.breakpoint("mini") {
+    &__text {
+      @include abs.mx-width-paragraph;
+    }
+  }
+
+  @include abs.breakpoint("large") {
+    margin: 150px 0;
+  }
+}

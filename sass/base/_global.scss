@@ -1,0 +1,45 @@
+@use "../abstracts/index" as abs;
+
+h1,
+h2,
+h3 {
+  color: abs.palette(Dark-Grayish-Blue);
+  font-weight: 600;
+}
+h2 {
+  line-height: 35px;
+}
+
+a {
+  text-decoration: none;
+}
+.container-body {
+  padding: 0 27px;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  color: abs.palette(Grayish-Blue);
+  background-image: url(../../images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include abs.breakpoint("mini") {
+    font-size: 1.0625rem;
+    background-size: 100% 10%;
+  }
+
+  @include abs.breakpoint("medium") {
+    padding: 0;
+    background-image: url(../../images/bg-header-desktop.png);
+    background-size: contain;
+  }
+
+  @include abs.breakpoint("large") {
+    font-size: 1.0625rem;
+  }
+
+  @include abs.breakpoint("huge") {
+    font-size: 1.125rem;
+  }
+}

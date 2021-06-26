@@ -1,0 +1,52 @@
+@use "../abstracts/index" as abs;
+
+.buttons {
+  @include abs.reset-list;
+  &__item {
+    max-width: 385px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__item--ios {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    padding: 13px 0;
+    font-weight: 600;
+    border-radius: 25px;
+    display: block;
+    color: #fff;
+    transition: opacity 0.25s;
+  }
+
+  &__link--ios {
+    background-color: abs.palette("Strong-Cyan");
+
+    box-shadow: 0 -2px 4px inset darken($color: abs.palette("Strong-Cyan"), $amount:
+            10%),
+      0 4px 15px lighten($color: abs.palette("Strong-Cyan"), $amount: 33%);
+  }
+
+  &__link--mac {
+    background-color: abs.palette("LightBlue");
+
+    box-shadow: 0 -2px 4px inset darken($color: abs.palette("LightBlue"), $amount:
+            10%),
+      0 4px 15px lighten($color: abs.palette("LightBlue"), $amount: 15%);
+  }
+
+  @include abs.breakpoint("large") {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      width: 230px;
+      margin: 0 10px;
+    }
+
+    &__link:hover {
+      opacity: 0.7;
+    }
+  }
+}

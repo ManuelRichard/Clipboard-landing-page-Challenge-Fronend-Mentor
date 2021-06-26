@@ -1,0 +1,11 @@
+@use "variables" as var;
+
+// map colors
+@function palette($color) {
+  @return map-get($map: var.$colors, $key: $color);
+}
+
+// media queries
+@function breakpoint($point) {
+  @return map-get($map: var.$breakpoints, $key: $point);
+}

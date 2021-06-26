@@ -1,0 +1,40 @@
+@use "../abstracts/index" as abs;
+
+// position
+// box-model
+// fonts
+// colores
+// varios
+.cont-header {
+  &__logo {
+    margin: 135px 0 40px 0;
+  }
+  &__title {
+    line-height: 40px;
+    font-size: 2.0625rem;
+  }
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  @include abs.breakpoint("mini") {
+    &__text {
+      @include abs.mx-width-paragraph;
+    }
+  }
+
+  @include abs.breakpoint("large") {
+    &__title {
+      font-size: 2.5rem;
+    }
+    &__logo {
+      margin: 150px 0 60px 0;
+    }
+  }
+
+  @include abs.breakpoint("huge") {
+    &__logo {
+      margin: 170px 0 60px 0;
+    }
+  }
+}

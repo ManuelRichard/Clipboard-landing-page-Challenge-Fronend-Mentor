@@ -1,0 +1,35 @@
+$colors: (
+  "Dark-Grayish-Blue": hsl(210, 10%, 33%),
+  "Grayish-Blue": hsl(201, 11%, 66%),
+  "Strong-Cyan": hsl(171, 66%, 44%),
+  "LightBlue": hsl(233, 100%, 69%),
+);
+
+:root {
+  // limit width of paragraphs
+  --font-size-title: 1rem;
+  --side-margin-global: 15px;
+
+  //estandar headings
+  --size-h2: 1.75rem;
+  --size-h3: 1.5rem;
+}
+
+$breakpoints: (
+  "mini": 650px,
+  "medium": 754px,
+  "large": 1350px,
+  "huge": 1410px,
+);
+
+@media screen and (min-width: map-get($map: $breakpoints, $key: "large" )) {
+  :root {
+    --size-h2: 1.975rem;
+    --side-margin-global: 70px;
+  }
+}
+@media screen and (min-width: map-get($map: $breakpoints, $key: "huge" )) {
+  :root {
+    --side-margin-global: 100px;
+  }
+}
